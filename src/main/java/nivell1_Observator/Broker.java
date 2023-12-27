@@ -13,7 +13,6 @@ public class Broker {
     public void addObservers(MarketObserver observer) {
 
         observers.add(observer);
-
     }
 
     public void removeObservers(MarketObserver observer) {
@@ -21,7 +20,6 @@ public class Broker {
         observers.remove(observer);
 
     }
-
     public void notifyObservers() {
         observers.stream().filter(Objects::nonNull).forEach(ob -> ob.update(this));
     }

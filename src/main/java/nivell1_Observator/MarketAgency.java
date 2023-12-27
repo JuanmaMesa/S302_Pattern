@@ -8,13 +8,9 @@ public class MarketAgency implements MarketObserver {
         this.name = name;
     }
 
-
     @Override
     public void update(Broker agent) {
         System.out.println("Agencia: "+name +" notificada. Nuevo valor en bolsa: "+ agent.getStockvalue());
 
     }
-
-
-
 }

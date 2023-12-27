@@ -10,7 +10,6 @@ public static void main(String[] args){
     MarketAgency observer1= new MarketAgency("Goldman Sachs");
 
 
-
     observable.addObservers(observer1);
     observable.addObservers(observer);
 
