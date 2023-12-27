@@ -4,9 +4,9 @@ public class PaymentDetalls {
     private String expireDate;
     private double money;
 
-    public PaymentDetalls(String expireDate) {
+    public PaymentDetalls(String expireDate, double money) {
         this.expireDate = expireDate;
-        this.money =100;
+        this.money = money;
     }
 
     public String getExpireDate(){
@@ -24,5 +24,6 @@ public class PaymentDetalls {
         this.money = money;
     }
 }
+
 
 

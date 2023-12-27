@@ -3,6 +3,9 @@ package nivell2_CallBack;
 public class Paypal implements  PaymentMethod {
     private int money = 2000;
 
+    public void setMoney(int money) {
+        this.money = money;
+    }
 
     @Override
     public void pay(PaymentCallBack callBack, PaymentDetalls paymentDetalls) {
