@@ -4,16 +4,19 @@ public class Main {
 
 public static void main(String[] args){
 
-    MarketAgent agent1 = new MarketAgent();
+    Broker observable = new Broker();
 
-    MarketAgency agency1 = new MarketAgency("VanguardGroup");
-    MarketAgency agency2= new MarketAgency("Goldman Sachs");
+    MarketAgency observer = new MarketAgency("VanguardGroup");
+    MarketAgency observer1= new MarketAgency("Goldman Sachs");
 
 
-    agent1.addObservers(agency1);
-    agent1.addObservers(agency2);
 
-    agent1.setStockvalue(120.8);
+    observable.addObservers(observer1);
+    observable.addObservers(observer);
+
+    observable.setStockvalue(120.8);
+    observable.setStockvalue(0);
+
 
 
 

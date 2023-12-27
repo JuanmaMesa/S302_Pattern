@@ -2,10 +2,11 @@ package nivell1_Observator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class MarketAgent {
+public class Broker {
 
-    private List<MarketObserver> observers = new ArrayList<>();
+    private final List<MarketObserver> observers = new ArrayList<>();
     private double stockValue;
 
 
@@ -22,16 +23,7 @@ public class MarketAgent {
     }
 
     public void notifyObservers() {
-
-        for(MarketObserver observer : observers) {
-            if(observer != null) {
-                observer.update(this);
-            }
-        }
-
-
-
-
+        observers.stream().filter(Objects::nonNull).forEach(ob -> ob.update(this));
     }
 
     public double getStockvalue() {

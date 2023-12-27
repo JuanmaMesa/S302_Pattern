@@ -2,11 +2,25 @@ package nivell2_CallBack;
 
 public class ShoeStore {
 
+    public void processPurchase(PaymentMethod paymentMethod, PaymentDetalls paymentDetalls){
 
-    public static void main(String[] args) {
-        System.out.println("hello word");
-        System.out.println();
-        System.out.println();
+        paymentMethod.pay(new PaymentCallBack() {
+            @Override
+            public void onPaymentSuccess() {
+                System.out.println("Pago realizado con exito");
+            }
+
+            @Override
+            public void onPaymentError(String errorMessage) {
+                System.out.println("Error en el pago: " + errorMessage);
+
+            }
+        },paymentDetalls);
+
+
     }
+
+
+
 
 }

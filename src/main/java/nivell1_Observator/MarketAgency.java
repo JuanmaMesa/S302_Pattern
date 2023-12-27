@@ -10,7 +10,7 @@ public class MarketAgency implements MarketObserver {
 
 
     @Override
-    public void update(MarketAgent agent) {
+    public void update(Broker agent) {
         System.out.println("Agencia: "+name +" notificada. Nuevo valor en bolsa: "+ agent.getStockvalue());
 
     }
