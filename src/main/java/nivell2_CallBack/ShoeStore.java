@@ -6,8 +6,8 @@ public class ShoeStore {
 
         paymentMethod.pay(new PaymentCallBack() {
             @Override
-            public void onPaymentSuccess() {
-                System.out.println("Pago realizado con exito");
+            public void onPaymentSuccess(String msm) {
+                System.out.println("Pago realizado con exito: " + msm );
             }
 
             @Override

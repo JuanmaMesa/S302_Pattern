@@ -1,20 +1,20 @@
 package nivell2_CallBack;
 
-public class CreditCardPayment implements  PaymentMethod{
+public class CreditCard implements  PaymentMethod{
 
 
     @Override
     public void pay(PaymentCallBack callBack, PaymentDetalls paymentdetall) {
         boolean success = procesPayment(paymentdetall);
         if (success) {
-            callBack.onPaymentSuccess();
+            callBack.onPaymentSuccess("Targeta de credito valida");
         } else {
             callBack.onPaymentError("targeta de credito no valida");
         }
 
     }
-    private boolean procesPayment(PaymentDetalls detalls){
-        int expiryDate = converterDate(detalls.getExpireDate());
+    private boolean procesPayment(PaymentDetalls details){
+        int expiryDate = converterDate(details.getExpireDate());
 
         int date = 202312;
         boolean success = false;
